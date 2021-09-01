@@ -84,6 +84,7 @@ export const submitTaskAction = (taskId, url, comments) => {
         menteeComment: comments,
         taskUrl: url,
       });
+      console.log(res);
       dispatch({ type: types.SUBMIT_TASK, payload: taskId });
     } catch (err) {
       const error_msg = err.response
